@@ -1,0 +1,23 @@
+{
+  "name": "parentserver",
+  "version": "1.0.0",
+  "description": "Server that will pull routers and app data to host subapps.",
+  "main": "app.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcreeds/parentserver.git"
+  },
+  "author": "Trevor Creed",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/tcreeds/parentserver/issues"
+  },
+  "homepage": "https://github.com/tcreeds/parentserver#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  }
+}
