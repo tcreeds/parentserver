@@ -1,2 +1,19 @@
 <!DOCTYPE html>
 <h1>Base App</h1>
+<ul id='list'></ul>
+<script>
+    
+    function reqListener(e)
+    {
+        var json = JSON.parse(e.currentTarget.responseText);
+        var el = document.getElementById('list');
+        for (var i = 0; i < json.length; i++)
+        {
+            el.innerHTML = el.innerHTML + '<li><a href="' + json[i].uri + '">' + json[i].name + '</a></li>';
+        }
+    }
+    var req = new XMLHttpRequest();
+    req.addEventListener("load", reqListener);
+    req.open("GET", "http://localhost:8000/listSubApps");
+    req.send();
+</script>
